@@ -1,0 +1,58 @@
+{
+  "name": "react-redux-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.tsx",
+  "dependencies": {
+    "@hot-loader/react-dom": "^17.0.0-rc.2",
+    "@material-ui/styles": "^4.10.0",
+    "@types/react-redux": "^7.1.9",
+    "react": "16.13.1",
+    "react-app-rewire-hot-loader": "^2.0.1",
+    "react-app-rewired": "^2.1.6",
+    "react-dom": "16.13.1",
+    "react-hot-loader": "^4.13.0",
+    "react-redux": "7.2.1",
+    "react-scripts": "3.4.3",
+    "redux": "4.0.5",
+    "redux-thunk": "2.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.51",
+    "@types/react-dom": "^16.9.8",
+    "@types/webpack-env": "^1.15.3",
+    "@typescript-eslint/eslint-plugin": "^4.4.0",
+    "@typescript-eslint/parser": "^4.4.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.21.4",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "typescript": "3.7.5"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-app-rewired eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc --noEmit && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx}": [
+      "eslint --fix"
+    ]
+  }
+}
